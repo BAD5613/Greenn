@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRENN 🦎✅</title> Apartir de Hoje você Vai deixar de perder ✅
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            padding: 20px 15px 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header h1 .verified {
+            color: #1DA1F2;
+            font-size: 1.5rem;
+        }
+
+        .header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #cccccc;
+            line-height: 1.3;
+            margin-top: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            background-color: #4a4a4a;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 80px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background-color: #5a5a5a;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .card-icon i {
+            font-size: 28px;
+        }
+
+        .card-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .icon-free {
+            background: linear-gradient(45deg, #8A2BE2, #00BFFF);
+            border-radius: 50%;
+            color: white;
+            font-size: 0.7rem !important;
+            font-weight: 900;
+        }
+
+        .icon-money {
+            background-color: #e0a3f5;
+            border-radius: 50%;
+            color: #4a0e63;
+        }
+
+        .icon-vip {
+            color: #c77dff;
+        }
+
+        .icon-info {
+            color: #cccccc;
+        }
+
+        .icon-telegram {
+            color: #0088cc;
+        }
+
+        .icon-whatsapp {
+            color: #25D366;
+        }
+
+        .icon-plus {
+            color: #00BFFF;
+            border: 3px solid #00BFFF;
+            border-radius: 50%;
+        }
+
+        .full-width-card {
+            background-color: #4a4a4a;
+            border: 2px solid #666;
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .full-width-card:hover {
+            background-color: #5a5a5a;
+        }
+
+        .full-width-card .card-text {
+            font-size: 0.9rem;
+        }
+
+        .full-width-card .card-icon {
+            color: #00BFFF;
+        }
+
+        .star { color: #FFD700; }
+        .diamond { color: #00BFFF; }
+        .money { color: #32CD32; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> 
+                
+                <i class="fas fa-check-circle verified"></i>
+            </h1>
+            <h2>"PALPITES </h2>""
+        </div>
+
+        <div class="grid">
+            <a href="#" class="card" onclick="handleClick('Palpites Gratuitos')">
+                <div class="card-icon icon-free">FREE</div>
+                <div class="card-text">PALPITES<br>Free </div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick('Fixo & Million')">
+                <div class="card-icon icon-money">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="card-text">
+                    <i class="fas fa-gem diamond"></i> FIXO &<br>Vip <span class="money">$</span>
+                </div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick(' VIP Master')">
+                <div class="card-icon icon-vip">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="card-text"> VIP<br>MASTER <span class="star">★</span></div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick(' VIP Premium')">
+                <div class="card-icon icon-vip">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="card-text"> VIP PREMIUM<br><i class="fas fa-gem diamond"></i></div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick('Importante Info')">
+                <div class="card-icon icon-info">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="card-text">IMPORTANTE<br>INFO</div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick('Apoio Telegram')">
+                <div class="card-icon icon-telegram">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <div class="card-text">APOIO<br>TELEGRAM</div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick('Apoio Whatsapp')">
+                <div class="card-icon icon-whatsapp">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="card-text">APOIO<br>WHATSAPP</div>
+            </a>
+
+            <a href="#" class="card" onclick="handleClick('Mais Opções')">
+                <div class="card-icon icon-plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="card-text">++++++</div>
+            </a>
+        </div>
+
+        <div class="full-width-card" onclick="handleClick('Consultar Jogos')">
+            <div class="card-text">WEB ONLINE & CONSULTAR JOGOS</div>
+            <div class="card-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(nomeBotao) {
+            alert('Você clicou em: ' + nomeBotao);
+            // Aqui você coloca a lógica real: window.location.href = 'seu_link';
+        }
+    </script>
+</body>
+</html>
