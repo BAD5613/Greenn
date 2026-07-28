@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Anúncio VIP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:Arial;height:100vh;width:100vw;overflow:hidden}
+#container{position:relative;width:100%;height:100%;background:#000}
+video{width:100%;height:100%;object-fit:cover}
+#overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 100%);pointer-events:none}
+#close{position:absolute;top:14px;right:14px;width:38px;height:38px;background:rgba(255,255,255,0.25);border-radius:50%;display:none;align-items:center;justify-content:center;font-size:22px;z-index:10;cursor:pointer;border:1px solid rgba(255,255,255,0.4)}
+#timer{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.75);padding:8px 20px;border-radius:20px;font-size:13px;z-index:10;border:1px solid #333}
+#progress{position:absolute;bottom:0;left:0;height:4px;background:#FFD700;width:0%;z-index:11;transition:width 0.2s linear}
+#label{position:absolute;top:14px;left:14px;background:#1A1A1A;padding:5px 12px;border-radius:14px;font-size:11px;color:#aaa;z-index:10}
+</style>
+</head>
+<body>
+<div id="container">
+  <video id="adVideo" autoplay muted loop playsinline></video>
+  <div id="overlay"></div>
+  <div id="label">Anúncio • Palpite Ouro AO</div>
+  <div id="close" onclick="fechar()">✕</div>
+  <div id="timer">Pode fechar em <b id="count">15</b>s</div>
+  <div id="progress"></div>
+</div>
+
+<script>
+// VÍDEOS VARIADOS - Cada vez um diferente igual InShot
+const videos = [
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+];
+
+// Escolhe vídeo aleatório
+const videoEl = document.getElementById('adVideo');
+videoEl.src = videos[Math.floor(Math.random()*videos.length)];
+
+// TIMER 15s IGUAL INSHOT
+let tempo = 15;
+const countEl = document.getElementById('count');
+const closeBtn = document.getElementById('close');
+const progressEl = document.getElementById('progress');
+const timerEl = document.getElementById('timer');
+
+const interval = setInterval(()=>{
+  tempo--;
+  progressEl.style.width = ((15-tempo)/15*100) + "%";
+  if(tempo>0){
+    countEl.textContent = tempo;
+  } else {
+    clearInterval(interval);
+    timerEl.style.display="none";
+    closeBtn.style.display="flex";
+    progressEl.style.background="#00FF88";
+    progressEl.style.width="100%";
+    if(navigator.vibrate) navigator.vibrate(100);
+  }
+},1000);
+
+function fechar(){
+  try{window.AppInventor.setWebViewString("VIP_LIBERADO");}catch(e){}
+  document.body.innerHTML='<div style="background:#000;color:#FFD700;display:flex;align-items:center;justify-content:center;height:100vh;font-family:Arial;text-align:center"><div><div style="font-size:60px">✅</div><br><b>VIP LIBERADO!</b><br><span style="font-size:12px;color:#fff">Voltando...</span></div></div>';
+  setTimeout(()=>{if(window.history.length>1)history.back();},800);
+}
+
+// MONETAG - COLA TEU CÓDIGO AQUI EM BAIXO PARA GANHAR NA BYBIT
+// Exemplo: <script src="https://.../tag.min.js" data-zone="1234567"><\/script>
+</script>
+
+<!-- 👇 COLA TEU CÓDIGO MONETAG AQUI -->
+<!-- <script src="https://alwingo.com/...." data-zone="SEU_ID"></script> -->
+
+</body>
+</html>
